@@ -1,7 +1,7 @@
 import tkinter as tk
 import sqlite3
 import tkinter.ttk as ttk
-# Função para criar o banco de dados e tabela
+#função para criar o banco de dados e tabela
 def criar_banco_de_dados():
     conexao = sqlite3.connect('contatos.db')
     cursor = conexao.cursor()
@@ -14,26 +14,26 @@ def criar_banco_de_dados():
     if contador == 0:
         
         contatos = [
-            ("Tadeu", 123456789, "01-01-1991"),
-            ("João", 78955552, "20-01-1991"),
-            ("Maria", 111111111, "10-05-1992"),
-            ("Pedro", 123457896, "15-12-1988"),
-            ("Alisson", 52486516, "03-01-1991"),
-            ("Adryelson", 35465898, "19-05-1999"),
-            ("Robson", 55555555, "19-12-1782"),
-            ("João Pedro", 7777777, "05-09-2004"),
-            ("João Lucas", 2222222, "19-01-2004"),
-            ("Lucas", 34354355, "19-01-2003"),
-             ("Maicon", 45842669, "11-09-1999"),
-            ("Vitoria", 46888466, "01-01-1902"),
-            ("Pamela", 484455455, "19-05-1000"),
-            ("Camila", 7816128, "29-12-1959"),
-            ("Amanda", 12359899, "30-10-2003"),
-            ("David", 9001555, "04-07-1099"),
-            ("Matheus", 0000000, "19-12-1970"),
-            ("Yasmin", 123404560, "10-11-2004"),
-            ("Rian", 12500419, "19-04-1904"),
-            ("Rennan", 454006789, "27-08-1945"),
+            ("Tadeu", 123456789, "01/01/1991"),
+            ("João", 78955552, "20/01/1991"),
+            ("Maria", 111111111, "10/05/1992"),
+            ("Pedro", 123457896, "15/12/1988"),
+            ("Alisson", 52486516, "03/01/1991"),
+            ("Adryelson", 35465898, "19/05/1999"),
+            ("Robson", 55555555, "19/12/1782"),
+            ("João Pedro", 7777777, "05/09/2004"),
+            ("João Lucas", 2222222, "19/01/2004"),
+            ("Lucas", 34354355, "19/01/2003"),
+             ("Maicon", 45842669, "11/09/1999"),
+            ("Vitoria", 46888466, "01/01/1902"),
+            ("Pamela", 484455455, "19/05/1000"),
+            ("Camila", 7816128, "29/12/1959"),
+            ("Amanda", 12359899, "30/10/2003"),
+            ("David", 9001555, "04/07/1099"),
+            ("Matheus", 10000100, "19/12/1970"),
+            ("Yasmin", 123404560, "10/11/2004"),
+            ("Rian", 12500419, "19/04/1904"),
+            ("Rennan", 454006789, "27/08/1945"),
         ]
         cursor.executemany("INSERT INTO contatos VALUES (?, ?, ?)", contatos)
 
@@ -91,7 +91,7 @@ def aniversariantes_mes():
     contatos_filtrados = []
     for contato in contatos:
         data_nascimento = contato[2]
-        mes_nascimento = int(data_nascimento.split('-')[1])
+        mes_nascimento = int(data_nascimento.split('/')[1])
         if mes_nascimento == mes_atual:
             contatos_filtrados.append(contato)
 
