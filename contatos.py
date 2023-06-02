@@ -123,7 +123,7 @@ buscar_button.pack()
 listar_button = ttk.Button(janela, text="Listar Contatos", command=listar_contatos)
 listar_button.pack()
 
-mes_label = ttk.Label(janela, text="Mês (1-12):")
+mes_label = ttk.Label(janela, text="Mês (1 ao 12):")
 mes_label.pack()
 
 mes = ttk.Entry(janela)
