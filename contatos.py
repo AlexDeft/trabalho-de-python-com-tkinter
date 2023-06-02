@@ -134,5 +134,5 @@ aniversariantes_button.pack()
 
 resultado = tk.Text(janela)
 resultado.pack()
-
+criar_banco_de_dados()
 janela.mainloop()
